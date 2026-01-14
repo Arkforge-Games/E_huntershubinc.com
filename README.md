@@ -186,19 +186,19 @@ mvn test
 
 ### 1. Create Account - Success (201 Created)
 
-![Create Account Success](Screenshot/Post.png)
+![Create Account Success](Project01/Screenshot/Post.png)
 
 ### 2. Get Customer - Success (302 Found)
 
-![Get Customer Success](Screenshot/Get.png)
+![Get Customer Success](Project01/Screenshot/Get.png)
 
 ### 3. Get Customer - Not Found (404 Not Found)
 
-![Get Customer Not Found](Screenshot/Get%20Customer%20-%20Not%20Found.png)
+![Get Customer Not Found](Project01/Screenshot/Get%20Customer%20-%20Not%20Found.png)
 
 ### 4. Create Account - Validation Error (400 Bad Request)
 
-![Create Account Validation Error](Screenshot/Create%20Account%20Validation%20Error.png)
+![Create Account Validation Error](Project01/Screenshot/Create%20Account%20Validation%20Error.png)
 
 ---
 
@@ -214,5 +214,7 @@ The application uses H2 in-memory database. You can access the H2 console at:
 ---
 
 ## Author
+
+**Anthony Castor**
 
 Java Microservice Coding Exam Submission
