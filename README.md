@@ -1,14 +1,21 @@
 # Account Service - Java Microservice
 
-A RESTful microservice for customer account management built with Java 8, Spring Boot 2.6, and H2 in-memory database.
+A RESTful microservice for customer account management built with Java 8, Spring Boot 2.6, and H2 in-memory database. Includes a modern React frontend with Tailwind CSS.
 
 ## Technologies Used
 
+### Backend
 - **Java 8**
 - **Spring Boot 2.6.14**
 - **Spring Data JPA**
 - **H2 Database** (in-memory)
 - **Maven**
+
+### Frontend
+- **React 19**
+- **Vite 7**
+- **Tailwind CSS 4**
+- **React Router DOM 7**
 
 ## Project Structure
 
@@ -44,7 +51,21 @@ Project01/
 │   └── test/
 │       └── java/com/exam/account/
 │           └── AccountControllerTest.java
-└── README.md
+└── React/                          # Frontend Application
+    ├── package.json
+    ├── vite.config.js
+    ├── postcss.config.js
+    ├── index.html
+    └── src/
+        ├── main.jsx
+        ├── App.jsx
+        ├── index.css
+        ├── components/
+        │   ├── Navbar.jsx
+        │   ├── CreateAccount.jsx
+        │   └── SearchCustomer.jsx
+        └── services/
+            └── api.js
 ```
 
 ## API Endpoints
@@ -158,8 +179,10 @@ Retrieves customer account information by customer number.
 
 - Java 8 or higher
 - Maven 3.x
+- Node.js 18+ (for frontend)
+- npm (for frontend)
 
-### Build and Run
+### Backend (Spring Boot)
 
 ```bash
 # Navigate to project directory
@@ -172,13 +195,38 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-The application will start on `http://localhost:7810`
+The backend will start on `http://localhost:7810`
+
+### Frontend (React)
+
+```bash
+# Navigate to React directory
+cd Project01/React
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The frontend will start on `http://localhost:7811`
 
 ### Run Tests
 
 ```bash
+# Backend tests
+cd Project01
 mvn test
 ```
+
+### Application URLs
+
+| Service | URL |
+|---------|-----|
+| Backend API | http://localhost:7810 |
+| Frontend UI | http://localhost:7811 |
+| H2 Console | http://localhost:7810/h2-console |
 
 ---
 
@@ -199,6 +247,22 @@ mvn test
 ### 4. Create Account - Validation Error (400 Bad Request)
 
 ![Create Account Validation Error](Project01/Screenshot/Create%20Account%20Validation%20Error.png)
+
+---
+
+## React UI Screenshots
+
+### 1. Create Account Page
+
+Modern, responsive form for creating new customer accounts with real-time validation.
+
+![React Create Account](Project01/Screenshot/React_GUI_Create.png)
+
+### 2. Search Customer Page
+
+Search and view customer details with account information displayed in a clean card layout.
+
+![React Search Customer](Project01/Screenshot/React_GUI_Search.png)
 
 ---
 
